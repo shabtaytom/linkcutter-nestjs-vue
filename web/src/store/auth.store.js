@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export const auth = new Vuex.Store({
     state: {
-        count: 0,
+        count: 666,
     },
     mutations: {
         count(state, count) {
