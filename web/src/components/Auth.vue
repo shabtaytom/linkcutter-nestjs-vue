@@ -10,6 +10,7 @@
       <div v-else>
         <button class="btn btn-secondary" style="margin: 15px;" @click="destroyToken()">Logout</button>
       </div>
+      <router-link :to="{ name: 'home-my-feed' }" class="nav-link" active-class="active">Your Feed</router-link>
     </div>
   </div>
 </template>

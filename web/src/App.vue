@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <Navbar/>
+    <router-view></router-view>
+    <!-- 
+    <router-view></router-view>
     <Auth/>
-    <Link v-if="$store.auth.getters.isLogged" />
+    <Link v-if="$store.auth.getters.isLogged" /> -->
   </div>
 </template>
 
