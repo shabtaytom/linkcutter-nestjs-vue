@@ -8,7 +8,15 @@ export const AuthService = {
             password,
         }
         const res = await ApiService.post('auth/login', body)
-        const token = res.data.access_token
-        JwtService.saveToken(token)
+        if (!res || !res.data || !res.data.access_token) {
+            store.auth.commit('isLogged', true)
+            throw new Error(`couldn't login`)
+        }
+
+        store.auth.commit('isLogged', true)
+    },
+    destroyToken(store) {
+        JwtService.destroyToken()
+        store.auth.commit('isLogged', false)
     },
 }

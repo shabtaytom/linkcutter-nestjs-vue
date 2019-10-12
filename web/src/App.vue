@@ -2,7 +2,7 @@
   <div id="app">
     <Navbar/>
     <Auth/>
-    <Link/>
+    <Link v-if="$store.auth.getters.isLogged" />
   </div>
 </template>
 

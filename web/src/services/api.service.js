@@ -6,7 +6,6 @@ const API_URL = config.apiUrl
 
 export const ApiService = {
     async getParams(route, params) {
-        this.setHeader()
         return this.get(`${route}/${params}`)
     },
     setHeader() {
