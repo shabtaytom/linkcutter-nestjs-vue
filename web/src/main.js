@@ -7,10 +7,12 @@ import VueAxios from 'vue-axios'
 import axios from 'axios'
 import { store } from './store/store'
 import { router } from './router/router'
+import { initRouteProtection } from './router/protect-routes'
 
 Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
+initRouteProtection(router,store)
 
 
 
