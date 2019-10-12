@@ -12,7 +12,7 @@ export const AuthService = {
             store.auth.commit('isLogged', true)
             throw new Error(`couldn't login`)
         }
-
+        JwtService.saveToken(res.data.access_token)
         store.auth.commit('isLogged', true)
     },
     destroyToken(store) {

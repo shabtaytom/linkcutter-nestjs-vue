@@ -1,12 +1,13 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
+import JwtService from "../services/jwt.service"
 
 Vue.use(Vuex)
 
 export const auth = new Vuex.Store({
     state: {
         count: 666,
-        isLogged: false,
+        isLogged: !!JwtService.getToken(),
     },
     mutations: {
         count(state, count) {

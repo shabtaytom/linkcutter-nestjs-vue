@@ -12,6 +12,12 @@ Vue.use(Router)
             children: []
         },
         {
+            name: 'about',
+            path: "/about",
+            component: () => import("../components/About.vue"),
+            children: []
+        },
+        {
             name: 'login',
             path: "/login",
             component: () => import("../components/Auth.vue"),

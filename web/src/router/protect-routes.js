@@ -5,7 +5,7 @@ export function initRouteProtection(router, store) {
         console.log('allowed', allowed)
         if (!allowed) {
             router.push('/login')
-            
+
         } else {
             // next('login');
             next();
@@ -33,6 +33,7 @@ export function initRouteProtection(router, store) {
 
     const openRoutes = [
         'login',
+        'about',
     ]
 }
 
