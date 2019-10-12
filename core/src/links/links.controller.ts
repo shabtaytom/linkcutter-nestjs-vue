@@ -1,12 +1,14 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, UseGuards } from '@nestjs/common';
 import { CreateLinkDto } from './dto/create-link.dto';
 import { LinksService } from './links.service';
 import { Link } from './interfaces/link.interface';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('links')
 export class LinksController {
   constructor(private readonly linksService: LinksService) { }
 
+  @UseGuards(AuthGuard('jwt'))
   @Post()
   async create(@Body() createLinkDto: CreateLinkDto) {
     console.log('create')

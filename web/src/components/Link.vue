@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import axios from "axios"
 import { LinkService } from "../services/link.service";
 
 export default {
@@ -38,9 +37,9 @@ export default {
     async getLink() {
       await LinkService.getLink(this.$store, this.findId)
     },
-    async test() {
-      const linkCount = await LinkService.getLinksCount(this.$store)
-    }
+    // async test() {
+    //   const linkCount = await LinkService.getLinksCount(this.$store)
+    // }
   }
 }
 </script>

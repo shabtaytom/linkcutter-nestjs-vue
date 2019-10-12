@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navbar/>
+    <Auth/>
     <Link/>
   </div>
 </template>
@@ -8,12 +9,14 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import Link from './components/Link.vue'
+import Auth from './components/Auth.vue'
 
 export default {
   name: 'app',
   components: {
     Navbar,
-    Link
+    Link,
+    Auth
   }
 }
 </script>
